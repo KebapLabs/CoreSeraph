@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CoreSeraph</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="/js/main.js" defer></script>
+</head>
+<body>
+  <div class="container" style="display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;">
+    <h1>CoreSeraph</h1>
+    <p style="text-align: center; color: var(--primary-gray); margin-bottom: 30px; font-size: 11px; text-transform: uppercase; max-width: 600px;">
+      A little forum made for fun on Yggdrasil. Ran by @1casie
+    </p>
+    
+    <div class="auth-container" style="display: flex; gap: 30px; flex-wrap: wrap; justify-content: center; max-width: 900px;">
+      <!-- Login Section -->
+      <div class="auth-section" style="flex: 1; min-width: 300px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="text-align: center;">AUTHENTICATE YOURSELF</h3>
+        <form id="login-form" style="width: 100%; max-width: 350px;">
+          <div class="form-group" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
+            <label for="privateKey" style="margin-bottom: 8px; text-align: center;">PRIVATE KEY</label>
+            <input 
+              type="text" 
+              id="privateKey" 
+              name="privateKey" 
+              placeholder="Enter your private key" 
+              title="Enter your private key (e.g., base64url string)"
+              required
+              style="width: 100%; max-width: 300px; padding: 10px; text-align: center;"
+            >
+          </div>
+          <button type="submit" class="btn" style="width: 100%; max-width: 300px; padding: 10px; display: block; margin: 0 auto;">LOGIN</button>
+        </form>
+      </div>
+
+      <!-- Generate New Account Section -->
+      <div class="auth-section" style="flex: 1; min-width: 300px; max-width: 400px; display: flex; flex-direction: column; align-items: center;">
+        <h3 style="text-align: center;">CREATE NEW ACCOUNT</h3>
+        <form id="generate-form" style="width: 100%; max-width: 350px;">
+          <div class="form-group" style="display: flex; flex-direction: column; align-items: center; margin-bottom: 20px;">
+            <label for="moniker" style="margin-bottom: 8px; text-align: center;">MONIKER (DISPLAY NAME)</label>
+            <input 
+              type="text" 
+              id="moniker" 
+              name="moniker" 
+              placeholder="Choose a display name" 
+              maxlength="20"
+              title="Your display name (can be shared)"
+              required
+              style="width: 100%; max-width: 300px; padding: 10px; text-align: center;"
+            >
+          </div>
+          <button type="submit" class="btn btn-secondary" style="width: 100%; max-width: 300px; padding: 10px; display: block; margin: 0 auto;">GENERATE KEYS</button>
+        </form>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 30px; font-size: 10px; color: var(--primary-gray); text-transform: uppercase; max-width: 600px;">
+      <p>YOUR PRIVATE KEY IS YOUR PASSWORD - KEEP IT SECURE! WE DO NOT STORE IT AT HOME! I CANNOT STRESS THIS ENOUGH!</p>
+      <p>PUBLIC KEY AND MONIKER ARE VISIBLE ON POSTS</p>
+    </div>
+  </div>
+</body>
+</html>
